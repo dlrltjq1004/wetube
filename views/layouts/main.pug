@@ -1,11 +1,10 @@
 doctype html
 html
     head
-        title WeTube
+    <script src="https://kit.fontawesome.com/10e57485fc.js"></script>
+        title #{pageTitle} #{siteName}
     body
-        header
-            h1 WeTube
+        include ../partials/header
         main
              block content
-        footer
-            span &copy; WeTube
+        include ../partials/footer
