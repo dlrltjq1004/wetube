@@ -11,6 +11,6 @@ Cloing Youtube with Vanilla and NodeJS
 - [ ] User Detail
 - [ ] EditProfile
 - [ ] Change Password
-- [ ] Upload
+- [x] Upload
 - [ ] Video Detail
-- [ ] Edit Video
+- [x] Edit Video
