@@ -1,53 +1,14 @@
-export const videos = [
-  {
-    id: 324393,
-    title: "Video awesome",
-    description: "This is something I love",
-    views: 24,
-    videoFile: "https://www.w3schools.com/html/mov_bbb.mp4",
-    creator: {
-      id: 121212,
-      name: "jon",
-      email: "jon@google.com"
-    }
-  },
+import mongoose from "mongoose";
 
-  {
-    id: 1212121,
-    title: "Video super",
-    description: "This is something I love",
-    views: 24,
-    videoFile: "https://www.w3schools.com/html/mov_bbb.mp4",
-    creator: {
-      id: 121212,
-      name: "jon",
-      email: "jon@google.com"
-    }
-  },
+mongoose.connect("mongodb://localhost:27017/we-tube", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
-  {
-    id: 55555,
-    title: "Video nice",
-    description: "This is something I love",
-    views: 24,
-    videoFile: "https://www.w3schools.com/html/mov_bbb.mp4",
-    creator: {
-      id: 121212,
-      name: "jon",
-      email: "jon@google.com"
-    }
-  },
+const db = mongoose.connection;
 
-  {
-    id: 11111,
-    title: "Video perfect",
-    description: "This is something I love",
-    views: 24,
-    videoFile: "https://www.w3schools.com/html/mov_bbb.mp4",
-    creator: {
-      id: 121212,
-      name: "jon",
-      email: "jon@google.com"
-    }
-  }
-];
+const handleOpen = () => console.log("✔ Connected to DB");
+const handleError = error => console.log(`❌ Error on DB Connection:${error}`);
+
+db.once("open", handleOpen);
+db.on("error", handleError);
