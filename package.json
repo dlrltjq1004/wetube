@@ -35,18 +35,18 @@
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore 'scss'",
+    "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static' ",
     "dev:assets": "webpack --mode development -w",
     "build:assets": "webpack --mode production",
     "ngrok": "ngrok http 4000"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "nodemon": "^1.18.6",
-    "prettier": "^1.15.2"
+    "prettier": "^1.18.2"
   }
 }
