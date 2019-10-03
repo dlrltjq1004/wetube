@@ -1,6 +1,6 @@
 # WeTube
 
-Cloing Youtube with Vanilla and NodeJS
+현재 진행중인 프로젝트라 이미지가 없습니다.
 
 ## Pages:
 
