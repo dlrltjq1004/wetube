@@ -76,6 +76,7 @@ export const postGithubLogIn = (req, res) => {
 export const facebookLogin = passport.authenticate("facebook");
 
 export const facebookLoginCallback = async (_, __, profile, cb) => {
+  console.log(_, __, profile, cb);
   const {
     _json: { id, name, email }
   } = profile;
