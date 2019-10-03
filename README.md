@@ -4,13 +4,13 @@ Cloing Youtube with Vanilla and NodeJS
 
 ## Pages:
 
-- [ ] Home
+- [x] Home
 - [x] Join
 - [x] Login
 - [x] Search
-- [ ] User Detail
-- [ ] EditProfile
-- [ ] Change Password
+- [x] User Detail
+- [x] EditProfile
+- [x] Change Password
 - [x] Upload
 - [ ] Video Detail
 - [x] Edit Video
