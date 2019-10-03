@@ -10,12 +10,7 @@ export const getJoin = (req, res) => {
 
 export const postJoin = async (req, res, next) => {
   const {
-    body: {
-      name,
-      email,
-      password,
-      password2
-    }
+    body: { name, email, password, password2 }
   } = req;
   if (password !== password2) {
     res.status(400);
@@ -51,12 +46,7 @@ export const githubLogin = passport.authenticate("github");
 
 export const githubLoginCallback = async (_, __, profile, cb) => {
   const {
-    _json: {
-      id,
-      avatar_url: avatarUrl,
-      name,
-      email
-    }
+    _json: { id, avatar_url: avatarUrl, name, email }
   } = profile;
   try {
     const user = await User.findOne({
@@ -87,11 +77,7 @@ export const facebookLogin = passport.authenticate("facebook");
 
 export const facebookLoginCallback = async (_, __, profile, cb) => {
   const {
-    _json: {
-      id,
-      name,
-      email
-    }
+    _json: { id, name, email }
   } = profile;
   try {
     const user = await User.findOne({
@@ -133,9 +119,7 @@ export const getMe = (req, res) => {
 
 export const userDetail = async (req, res) => {
   const {
-    params: {
-      id
-    }
+    params: { id }
   } = req;
   try {
     const user = await User.findById(id);
@@ -152,6 +136,26 @@ export const getEditProfile = (req, res) =>
   res.render("editProfile", {
     pageTitle: "Edit Profile"
   });
+
+export const postEditProfile = async (req, res) => {
+  const {
+    body: { name, email },
+    file
+  } = req;
+  try {
+    await User.findByIdAndUpdate(req.user.id, {
+      name,
+      email,
+      avatarUrl: file ? file.path : req.user.avatarUrl
+    });
+    res.redirect(routes.me);
+  } catch (error) {
+    res.render("editProfile", {
+      pageTitle: "Edit Profile"
+    });
+  }
+};
+
 export const changePassword = (req, res) =>
   res.render("changePassword", {
     pageTitle: "Change Password"
