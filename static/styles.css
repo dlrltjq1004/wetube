@@ -442,7 +442,10 @@ input[type="submit"] {
   position: relative; }
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
+  .videoPlayer:hover video {
+    max-width: 100%; }
   .videoPlayer video {
+    width: 100%;
     max-width: 100%; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
