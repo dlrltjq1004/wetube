@@ -453,13 +453,13 @@ input[type="submit"] {
     color: white;
     position: absolute;
     z-index: 9;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 16px;
-    padding: 5px 10px 0px 10px; }
+    padding: 10px; }
     .videoPlayer .videoPlayer__controls .videoPlayer__column:first-child {
       display: -webkit-box;
       display: -webkit-flex;
