@@ -7,11 +7,12 @@
     width: 100%;
     max-width: 320px;
     margin-bottom: 50px;
+    input {
+      margin-top: 10px;
+    }
     input:not([type="file"]),
     .fileUpload {
       display: block;
-      // justify-content: center;
-      // align-items: center;
       width: 100%;
       padding-top: 10px;
       padding-bottom: 10px;
