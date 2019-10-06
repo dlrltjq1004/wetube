@@ -1,8 +1,0 @@
-{
-  "javascript.format.enable": false,
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "files.eol": "\n",
-  "prettier.eslintIntegration": true,
-  "editor.formatOnSave": true
-
-}
