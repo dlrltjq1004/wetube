@@ -4,8 +4,10 @@ html
     <script src="https://kit.fontawesome.com/10e57485fc.js"></script>
         title #{pageTitle} #{siteName}
         link(rel="stylesheet", href="/static/styles.css")
+        
     body
         include ../partials/header
+        include ../partials/sections
         main
              block content
         include ../partials/footer
