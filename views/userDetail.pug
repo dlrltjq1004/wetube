@@ -9,7 +9,7 @@ block content
                 h4.profile__username=user.name
         else
             .user-profile__header
-                img.u-avatar(src=`/${user.avatarUrl}`)
+                img.u-avatar(src=user.avatarUrl)
                 h4.profile__username=user.name
 
         if loggedUser && user.id === loggedUser.id

@@ -6,10 +6,23 @@
     max-width: 100%;
   }
 
-  .videoBlock__title {
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  .videoBlock__info {
+
+    .videoBlock__title {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    .videoBlockInfo__sections {
+      font-size: 12px;
+      font-weight: 400;
+
+      .videoBlock__creatorName {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
