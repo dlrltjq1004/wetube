@@ -9,7 +9,7 @@ block content
         .video__info
             if loggedUser && video.creator.id === loggedUser.id
                 a(href=routes.editVideo(video.id))
-                    button Edit video
+                    button 비디오 수정
             h5.video__title=video.title
             .video__info-sections
                 if video.views === 1
@@ -20,7 +20,8 @@ block content
                     span.video__views 조회수 #{video.views}회
                     span.video__date#jsvideoDate • 업로드: 2019.10.7 
             .video__author
-                img.u-avatar(src=video.creator.avatarUrl)
+                a.u-profile-img(href=routes.userDetail(video.creator.id))                
+                    img.u-avatar(src=video.creator.avatarUrl)
                 a.u-profile(href=routes.userDetail(video.creator.id))=video.creator.name
                 p.video__description=video.description
         .video__comments

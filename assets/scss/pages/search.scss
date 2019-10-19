@@ -1,0 +1,11 @@
+.search__videos {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    grid-gap: 5px;
+
+    margin-top: 15px;
+
+    video {
+        background-color: black;
+    }
+}

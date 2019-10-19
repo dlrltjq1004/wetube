@@ -142,7 +142,6 @@ input {
 
 .u-avatar {
   height: 80px;
-  background-color: #ea232c;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%; }
@@ -450,7 +449,7 @@ input[type="submit"] {
   .videoBlock video {
     max-width: 100%; }
   .videoBlock .videoBlock__info .videoBlock__title {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     margin-bottom: 5px;
     margin-top: 10px; }
@@ -617,7 +616,7 @@ input[type="submit"] {
 
 .home-videos {
   display: grid;
-  grid-template-columns: repeat(6, minmax(200px, 1fr));
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
   grid-gap: 5px; }
 
 .video-detail__container {
@@ -666,11 +665,11 @@ input[type="submit"] {
       padding: 25px;
       border-top: 1px solid #CACFD2;
       border-bottom: 1px solid #CACFD2; }
-      .video-detail__container .video__info .video__author img {
+      .video-detail__container .video__info .video__author .u-profile-img img {
         position: relative;
         width: 53px;
         height: 53px; }
-      .video-detail__container .video__info .video__author a {
+      .video-detail__container .video__info .video__author .u-profile {
         position: absolute;
         margin-top: 20px;
         margin-left: 10px;
@@ -835,10 +834,10 @@ input[type="submit"] {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 68px; }
+    margin-bottom: 20px; }
     .user-profile .user-profile__header .profile__username {
       font-size: 18px;
-      margin-top: 15px; }
+      margin-top: 5px; }
   .user-profile .user-profile__btns {
     display: -webkit-box;
     display: -webkit-flex;
@@ -856,6 +855,22 @@ input[type="submit"] {
     -webkit-align-items: center;
        -moz-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-bottom: 35px; }
+    .user-profile .user-profile__btns a {
+      width: 130px; }
     .user-profile .user-profile__btns a:not(:last-child) {
       margin-bottom: 20px; }
+
+.videoBlock-header {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px; }
+
+.search__videos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(150px, 1fr));
+  grid-gap: 5px;
+  margin-top: 15px; }
+  .search__videos video {
+    background-color: black; }

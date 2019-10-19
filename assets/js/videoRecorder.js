@@ -20,7 +20,7 @@ const stopRecording = () => {
   videoRecorder.stop();
   recordBtn.removeEventListener("click", stopRecording);
   recordBtn.addEventListener("click", getVideo);
-  recordBtn.innerHTML = "Start recording";
+  recordBtn.innerHTML = "비디오 녹화";
   streamObject.getVideoTracks()[0].stop();
 };
 
@@ -43,7 +43,7 @@ const getVideo = async () => {
     videoPreview.srcObject = stream;
     videoPreview.muted = true;
     videoPreview.play();
-    recordBtn.innerHTML = "Stop recording";
+    recordBtn.innerHTML = "녹화 중지";
     streamObject = stream;
     startRecording();
   } catch (error) {
