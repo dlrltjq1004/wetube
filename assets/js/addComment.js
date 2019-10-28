@@ -3,6 +3,8 @@ import axios from "axios";
 const addCommentForm = document.getElementById("jsAddComment");
 const commentList = document.getElementById("jsCommentList");
 const commentNumber = document.getElementById("jsCommentNumber");
+const commentInput = addCommentForm.querySelector("input");
+
 
 const increaseNumber = () => {
     commentNumber.innerHTML = parseInt(commentNumber.innerHTML, 10) + 1;
@@ -28,6 +30,7 @@ const sendComment = async comment => {
     });
     if (response.status === 200) {
         addComment(comment);
+        btnRemove();
     }
 };
 
@@ -39,7 +42,41 @@ const handleSubmit = (event) => {
     commentInput.value = "";
 };
 
+const handleInputFocus = async (event) => {
+
+    const div = document.getElementById("jsCommentBtn");
+    if (div.hasChildNodes()) {
+        return;
+    }
+    const confirmBtn = document.createElement("button");
+    const confirmBtnText = document.createTextNode("확인");
+    confirmBtn.appendChild(confirmBtnText);
+    confirmBtn.id = "jsConfirmBtn";
+
+    const cancelBtn = document.createElement("button");
+    const cancelBtnText = document.createTextNode("취소");
+    cancelBtn.appendChild(cancelBtnText);
+    cancelBtn.id = "jsCancelBtn";
+
+    div.appendChild(confirmBtn);
+    div.appendChild(cancelBtn);
+
+    const removeCancelBtn = document.getElementById("jsCancelBtn");
+    removeCancelBtn.addEventListener("click", btnRemove);
+
+}
+
+const btnRemove = () => {
+    const div = document.getElementById("jsCommentBtn");
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
+    };
+
+}
+
 function init() {
+    commentInput.addEventListener("click", handleInputFocus);
+    // if (removeCancelBtn) {}
     addCommentForm.addEventListener("submit", handleSubmit);
 }
 

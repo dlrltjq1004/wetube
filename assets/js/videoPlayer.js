@@ -8,6 +8,7 @@ const fullScrnBtn = document.getElementById("jsFullScreen");
 const currentTime = document.getElementById("currentTime");
 const totalTime = document.getElementById("totalTime");
 const volumeRange = document.getElementById("jsVolume");
+const videoTitle = document.getElementById("jsVideoTitle");
 
 const registerView = () => {
   const videoId = window.location.href.split("/videos/")[1];
@@ -120,6 +121,8 @@ function handleDrag(event) {
     volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
   }
 }
+
+
 
 function init() {
   videoPlayer.volume = 0.5;

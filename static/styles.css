@@ -649,9 +649,8 @@ input[type="submit"] {
       display: -webkit-flex;
       display: -moz-box;
       display: -ms-flexbox;
-      display: flex; }
-      .video-detail__container .video__info .video__info-sections .video__views {
-        font-size: 14px; }
+      display: flex;
+      font-size: 15px; }
       .video-detail__container .video__info .video__info-sections .video__date {
         margin-left: 10px; }
     .video-detail__container .video__info .video__author {
@@ -766,9 +765,17 @@ input[type="submit"] {
             margin-top: 5px; }
             .video-detail__container .video__comments .video__comments-list li .video__comments-info .creator-sections .comments-content {
               width: 100%;
-              margin-top: 10px; }
+              margin-top: 10px;
+              font-size: 19px;
+              font-weight: 300; }
             .video-detail__container .video__comments .video__comments-list li .video__comments-info .creator-sections:not(:last-child) {
               margin-bottom: 15px; }
+            .video-detail__container .video__comments .video__comments-list li .video__comments-info .creator-sections .name {
+              font-size: 16px; }
+            .video-detail__container .video__comments .video__comments-list li .video__comments-info .creator-sections .date {
+              font-size: 14px;
+              opacity: 0.7;
+              margin-left: 3px; }
           .video-detail__container .video__comments .video__comments-list li .video__comments-info .settings-icon i {
             opacity: 0.5; }
           .video-detail__container .video__comments .video__comments-list li .video__comments-info .settings-icon i:hover {
@@ -837,7 +844,7 @@ input[type="submit"] {
     margin-bottom: 20px; }
     .user-profile .user-profile__header .profile__username {
       font-size: 18px;
-      margin-top: 5px; }
+      margin-top: 10px; }
   .user-profile .user-profile__btns {
     display: -webkit-box;
     display: -webkit-flex;

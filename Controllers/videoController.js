@@ -91,9 +91,11 @@ export const videoDetail = async (req, res) => {
       .populate("creator")
       .populate("comments");
     console.log(video);
+    const date = new Date(video.createdAt);
     res.render("videoDetail", {
       pageTitle: video.title,
-      video
+      video,
+      date
     });
   } catch (error) {
     res.redirect(routes.home);

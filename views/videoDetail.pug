@@ -4,7 +4,8 @@ include mixins/videoPlayer
 block content
     .video-detail__container
         +videoPlayer({
-            src:video.fileUrl
+            src:video.fileUrl,
+            title:video.title
         })
         .video__info
             if loggedUser && video.creator.id === loggedUser.id
@@ -14,11 +15,11 @@ block content
             .video__info-sections
                 if video.views === 1
                     span.video__views 조회수 1
-                    span.video__date#jsvideoDate • 업로드: 2019.10.7 
+                    span.video__date#jsvideoDate= `• 업로드: ${date.getFullYear()}. ${date.getMonth()}. ${date.getDate()}` 
 
                 else 
                     span.video__views 조회수 #{video.views}회
-                    span.video__date#jsvideoDate • 업로드: 2019.10.7 
+                    span.video__date#jsvideoDate= `• 업로드: ${date.getFullYear()}. ${date.getMonth()}. ${date.getDate()}` 
             .video__author
                 a.u-profile-img(href=routes.userDetail(video.creator.id))                
                     img.u-avatar(src=video.creator.avatarUrl)
@@ -41,18 +42,18 @@ block content
                         .video__commentInput
                             input(type="text", placeholder="댓글 추가...")
                             .inputLink
-                    .video__commentBtn
-                        button.confirmBtn#jsConfirmBtn 확인
-                        button.cancelBtn#jsCancel 취소
+                    .video__commentBtn#jsCommentBtn
+                    //-     button.confirmBtn#jsConfirmBtn 확인
+                    //-     button.cancelBtn#jsCancel 취소
                 else 
                     .video__addComment-list
                         img.u-avatar(src="https://wetube19.s3.ap-northeast-2.amazonaws.com/avatar/default-profile-img.png")
                         .video__commentInput
                             input(type="text", placeholder="댓글 추가...")
                             .inputLink
-                    .video__commentBtn
-                        button.confirmBtn#jsConfirmBtn 확인
-                        button.cancelBtn#jsCancel 취소
+                    .video__commentBtn#jsCommentBtn
+                    //-     button.confirmBtn#jsConfirmBtn 확인
+                    //-     button.cancelBtn#jsCancel 취소
                 ul.video__comments-list#jsCommentList
                     each comment in video.comments.reverse()
                         li
@@ -61,14 +62,14 @@ block content
                                     img.u-avatar(src="https://wetube19.s3.ap-northeast-2.amazonaws.com/avatar/default-profile-img.png")
                                 .creator-sections
                                     .creator
-                                        span kiseop Lee 
-                                        span 2019.10.13
+                                        span.name kiseop Lee 
+                                        span.date 2019.10.13
                                     .comments-content
                                         span=comment.text
                                 .settings-icon.dropdown
                                     i.fas.fa-ellipsis-v.dropdown-icon
                                     .dropdown-content
                                         a(href="#") 수정
-                                         a(href="#") 삭제    
+                                        a(href="#") 삭제    
 
                                     
