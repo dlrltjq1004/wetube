@@ -10,19 +10,15 @@ const config = {
   entry: ["@babel/polyfill", ENTRY_FILE],
   mode: MODE,
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js)$/,
-        use: [
-          {
-            loader: "babel-loader"
-          }
-        ]
+        use: [{
+          loader: "babel-loader"
+        }]
       },
       {
         test: /\.(scss)$/,
-        use: ExtractCSS.extract([
-          {
+        use: ExtractCSS.extract([{
             // 이걸 사용해야  webpack 이 css를 이해한다.
             loader: "css-loader"
           },
