@@ -64,9 +64,7 @@ const handleInputFocus = event => {
     removeCancelBtn.addEventListener("click", btnRemove);
 };
 
-const test = () => {
-    confirm("테스트");
-}
+
 
 const btnRemove = () => {
     const div = document.getElementById("jsCommentBtn");
@@ -76,7 +74,7 @@ const btnRemove = () => {
 };
 
 function init() {
-    commentInput.addEventListener("click", test);
+    commentInput.addEventListener("click", handleInputFocus);
     addCommentForm.addEventListener("submit", handleSubmit);
 }
 
