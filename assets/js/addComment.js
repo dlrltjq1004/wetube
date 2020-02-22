@@ -1,9 +1,19 @@
 import axios from "axios";
+import routes from "../../routes";
+import globalRouter from "../../routers/globalRouter";
+import {
+    getLogin,
+} from "../../Controllers/userController";
+import {
+    onlyPublic,
+} from "../../middlewares";
+
 
 const addCommentForm = document.getElementById("jsAddComment");
 const commentList = document.getElementById("jsCommentList");
 const commentNumber = document.getElementById("jsCommentNumber");
 const commentInput = addCommentForm.querySelector("input");
+const commentCheckToLogin = addCommentForm.querySelector(".video__addComment-list");
 
 const increaseNumber = () => {
     commentNumber.innerHTML = parseInt(commentNumber.innerHTML, 10) + 1;
@@ -41,7 +51,17 @@ const handleSubmit = event => {
     commentInput.value = "";
 };
 
+const handleGoTOLoginPage = () => {
+    globalRouter.get(routes.login, onlyPublic, getLogin);
+}
+
 const handleInputFocus = event => {
+
+    if (commentCheckToLogin.id === "jsNotLoginComments") {
+        handleGoTOLoginPage();
+        // return;
+    }
+
     const div = document.getElementById("jsCommentBtn");
     if (div.hasChildNodes()) {
         return;
@@ -64,9 +84,7 @@ const handleInputFocus = event => {
     removeCancelBtn.addEventListener("click", btnRemove);
 };
 
-const test = () => {
-    confirm("테스트");
-}
+
 
 const btnRemove = () => {
     const div = document.getElementById("jsCommentBtn");
@@ -76,7 +94,7 @@ const btnRemove = () => {
 };
 
 function init() {
-    commentInput.addEventListener("click", test);
+    commentInput.addEventListener("click", handleInputFocus);
     addCommentForm.addEventListener("submit", handleSubmit);
 }
 

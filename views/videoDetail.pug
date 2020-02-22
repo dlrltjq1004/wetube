@@ -37,7 +37,7 @@ block content
                         span#jsCommentNumber=`${video.comments.length}개`
             form.add__comment#jsAddComment
                 if loggedUser
-                    .video__addComment-list
+                    .video__addComment-list#jsLoginComments
                         img.u-avatar(src=loggedUser.avatarUrl)
                         .video__commentInput
                             input(type="text", placeholder="댓글 추가...")
@@ -46,7 +46,7 @@ block content
                     //-     button.confirmBtn#jsConfirmBtn 확인
                     //-     button.cancelBtn#jsCancel 취소
                 else 
-                    .video__addComment-list
+                    .video__addComment-list#jsNotLoginComments
                         img.u-avatar(src="https://wetube19.s3.ap-northeast-2.amazonaws.com/avatar/default-profile-img.png")
                         .video__commentInput
                             input(type="text", placeholder="댓글 추가...")
