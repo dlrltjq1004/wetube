@@ -89,9 +89,11 @@ typings/
 
 package-lock.json
 
+
 .vscode
+
+webpack_static
 
 uploads
 
-static
 
