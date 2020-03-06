@@ -60,7 +60,7 @@
 ### 회원가입 & 로그인
 + 사이트내에서 회원가입하여 로그인할 수 있습니다.
 + GitHub 또는 facebook 아이디를 통해 로그인할 수 있습니다.
-<img src="wetubeImage/register_login.gif">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/register_login.gif">
 
 <br>
 
