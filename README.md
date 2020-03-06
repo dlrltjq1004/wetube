@@ -31,7 +31,7 @@
 + 검색창을 이용하여 비디오를 검색할 수 있습니다.
 + 비디오 작성자의 채널을 확인할 수 있습니다.
 + 유튜브와 같이 작성자가 업로드 한 모든 비디오가 채널에 표시 됩니다.
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/serch.gif">
 
 <br>
 
@@ -46,7 +46,7 @@
 + 로그인한 사용자는 게시물에 댓글을 작성할 수 있습니다.
 + 자신의 댓글을 수정 하거나 삭제할 수 있습니다.
 + ajax를 이용하여 댓글 작성 기능을 구현 
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/comment.gif">
 
 <br>
 
