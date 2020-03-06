@@ -22,8 +22,7 @@
 + 재생바(재생시간 표시 ,구간 이동) - (미구현)
 + 볼륨조절 기능
 + 전체화면
-+ 소형 플레이어 - (미구현)
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/ezgif.com-gif-maker.gif">
 
 <br>
 
