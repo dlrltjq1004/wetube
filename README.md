@@ -12,7 +12,7 @@
 + 로그인한 사용자만 이용 가능 합니다.
 + 녹화기능을 이용하여 비디오를 녹화할 수 있습니다.
 + 자신의 PC에서 파일을 선택하여 비디오를 업로드할 수 있습니다.
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/videoUpload.gif">
 
 <br>
 
@@ -34,14 +34,14 @@
 
 <br>
 
-### 비디오 수정, 삭제
+### 비디오 수정 / 삭제
 + 자신의 작성한 게시물을 수정하거나 삭제할 수 있습니다.
 + 비디오 파일은 변경할 수 없습니다.
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/VideoEdit_Delete.gif">
 
 <br>
 
-### 댓글 작성, 수정(미구현), 삭제(미구현)
+### 댓글 작성
 + 로그인한 사용자는 게시물에 댓글을 작성할 수 있습니다.
 + 자신의 댓글을 수정 하거나 삭제할 수 있습니다.
 + ajax를 이용하여 댓글 작성 기능을 구현 
@@ -68,7 +68,7 @@
 + 로그인한 유저는 자신의 프로필 정보를 확인할 수 있습니다.
 + 프로필 정보를 변경할 수 있습니다.
 + 비밀번호를 변경할 수 있습니다.
-<img src="">
+<img src="https://github.com/dlrltjq1004/resume/blob/master/wetubeImage/profile.gif">
 
 <br>
 
